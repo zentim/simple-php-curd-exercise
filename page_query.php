@@ -2,13 +2,14 @@
 <hr>
 
 <p>
-  <form action="page_query_result.php" method="post">
+  <!-- <form action="page_query_result.php" method="post"> -->
+  <form action="controller.php" method="post">
     客戶代號: <input type="text" name="cust_no"><br>
 
     <p>
-      <input type="submit" value="查詢">
+      <input type="submit" name="operation_query" value="查詢">
       <input type="reset" value="清除">
-      <input onClick="window.location.href='index.php'" type="button" Value="回主畫面">
+      <input type="submit" name="page" value="回主畫面">
     </p>
   </form>
 </p>

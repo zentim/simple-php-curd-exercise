@@ -2,20 +2,20 @@
 <hr>
 
 <?php
-// 是否是表單送回
-if ( isset($_POST["cust_no"]) ) {
+if ( isset($_COOKIE["cust_no"]) ) {
    // 取得SQL指令
    $sql = "INSERT INTO basic(cust_no, name, id, tel_no, address)";
-   $sql .= " VALUES  (" . $_POST["cust_no"] . ", '" . $_POST["name"] . "', '";
-   $sql .= $_POST["id"] . "', '" . $_POST["tel_no"] . "', '" . $_POST["address"] . "')";
+   $sql .= " VALUES  (" . $_COOKIE["cust_no"] . ", '" . $_COOKIE["name"] . "', '";
+   $sql .= $_COOKIE["id"] . "', '" . $_COOKIE["tel_no"] . "', '" . $_COOKIE["address"] . "')";
    $sql = stripslashes($sql);
-//    $sql = stripslashes($_POST["Sql"]);
-//    echo "SQL指令:<b> $sql </b><br/>";
-   
+
+
+
   /**
    * connect to db
    */
   require_once("./include/db_connection.php");
+
 
 
   if ( mysqli_query($link, $sql) ){ // 執行SQL指令
@@ -25,19 +25,19 @@ if ( isset($_POST["cust_no"]) ) {
   }
 
 
-  
-   /**
-    * close db
-    */
-    require_once("./include/db_connection.php");
+
+  /**
+   * close db
+   */
+  require_once("./include/db_connection.php");
 }
 ?>
 
 
 <p>
-  <form action="page_add.php" method="post">
-    <input type="submit" value="回新增畫面">
-    <input onClick="window.location.href='index.php'" type="button" Value="回主畫面">
+  <form action="controller.php" method="post">
+    <input type="submit" name="page" value="回新增畫面">
+    <input type="submit" name="page" value="回主畫面">
   </form>
 </p>
 

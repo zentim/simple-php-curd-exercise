@@ -10,16 +10,10 @@
 
     <h2>資料庫管理系統</h2>
     <hr>
-    <form action="page_query.php" method="post">
+    <form action="controller.php" method="post">
         1. <input type="submit" name="page" value="查詢"><br>
-    </form>
-    <form action="page_add.php" method="post">
         2. <input type="submit" name="page" value="新增"><br>
-    </form>
-    <form action="page_update.php" method="post">
         3. <input type="submit" name="page" value="修改"><br>
-    </form>
-    <form action="page_delete.php" method="post">
         4. <input type="submit" name="page" value="刪除"><br>
     </form>
     <hr>
