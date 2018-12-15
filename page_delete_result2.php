@@ -25,7 +25,7 @@ if ( isset($_COOKIE["cust_no"]) && isset($_COOKIE["submit_delete"]) ) {
     /**
     * close db
     */
-    require_once("./include/db_connection.php");
+    require_once("./include/db_close.php");
   } else {
     echo "!資料沒有刪除!";
   }

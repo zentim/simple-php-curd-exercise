@@ -29,7 +29,7 @@ if ( isset($_COOKIE["cust_no"]) ) {
   /**
   * close db
   */
-  require_once("./include/db_connection.php");
+  require_once("./include/db_close.php");
 }
 ?>
 
